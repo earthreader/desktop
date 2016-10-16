@@ -1,0 +1,39 @@
+@import '../color'
+
+left-padding = 20px
+background = oc-gray-1
+foreground = oc-gray-9
+
+.navigation
+    background: background
+    color: foreground
+
+    header
+        h1
+            margin: left-padding
+            font-weight: 100
+
+    ol
+        padding: 0
+
+        list-style: none
+        li
+            margin: 0
+
+.feed-item
+    padding: 12px left-padding
+    transition: background-color 0.2s
+
+    &:hover
+        background-color: oc-gray-2
+
+    &.selected
+        background-color: primary-color['4']
+        &:hover
+            background-color: primary-color['5']
+
+    svg
+        display: inline-block
+        padding-right: 8px
+        height: 16px
+        fill: foreground
